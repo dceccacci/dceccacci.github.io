@@ -12,12 +12,12 @@ body {
     padding-top: 3.5rem;
   }
 a:link {
-    color: red;
+    color: LightSalmon;
   }
   
   /* visited link */
 a:visited {
-    color: green;
+    color: White;
   }
   
   /* mouse over link */
