@@ -53,33 +53,107 @@
           <h1 class="display-3"; style= font-weight:bold;>Code Circuits</h1>
         </div>
       </div>
-      <body style="text-align: center;"></body>
       <style>
-        /* unvisited link */
-    a:link {
-      color: Black;
-}
+        * {box-sizing: border-box}
+        body {font-family: "Lato", sans-serif;}
+        
+        /* Style the tab */
+        .tab {
+          float: left;
+          border: 2px black;
+          background-color: #2d9e82;
+          width: 20%;
+          height: 300px;
+        }
+        
+        /* Style the buttons inside the tab */
+        .tab button {
+          display: block;
+          background-color: inherit;
+          color: black;
+          padding: 22px 16px;
+          width: 100%;
+          border: none;
+          outline: none;
+          text-align: left;
+          cursor: pointer;
+          transition: 0.3s;
+          font-size: 17px;
+        }
+        
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: maroon;
+        }
+        
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+          background-color: coral;
+        }
+        
+        /* Style the tab content */
+        .tabcontent {
+          float: left;
+          padding: 0px 12px;
+          border: 1px solid #ccc;
+          width: 80%;
+          border-left: none;
+          height: 100%;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <h2>Digital Circuits</h2>
+        <p>Please click on the buttons inside the tabbed menu:</p>
+        
+        <div class="tab">
+          <button class="tablinks" onclick="openCircuit(event, '4bitadder')" id="defaultOpen">4-bit Adder</button>
+          <button class="tablinks" onclick="openCircuit(event, 'subtractor')">4-bit Subtractor</button>
+          <button class="tablinks" onclick="openCircuit(event, 'latchselect')">8-bit Adder with Latch/Select</button>
+          <button class="tablinks" onclick="openCircuit(event, 'counter')">8-bit Counter</button>
+        </div>
+        
+        <div id="4bitadder" class="tabcontent">
+          <h3>4-bit Adder</h3>
+          <img src="circuits/4-bit-adder.jpg">
+        </div>
+        
+        <div id="subtractor" class="tabcontent">
+          <h3>4-bit Adder with Subtractor Capability</h3>
+          <img src="circuits/adder_subtract.jpg">
+        </div>
+        
+        <div id="latchselect" class="tabcontent">
+          <h3>Adder with Latch/Selection Components</h3>
+          <img src="circuits/8-bit-adding-machine.jpg">
+        </div>
 
-    /* visited link */
-a:visited {
-  color: White;
-}
-
-/* mouse over link */
-a:hover {
-  color: White;
-}
-
-/* selected link */
-a:active {
-  color: blue;
-}
-      </style>
-<p>
-    <h2>4-bit Adder with Subtraction Circuit</h2>
-    <img src="adder_subtract.jpg" alt="addersubtractcircuit">
-</p>
-
+        <div id="counter" class="tabcontent">
+          <h3>Counter</h3>
+          <img src="circuits/8-bit-ripple.jpg">
+        </div>
+        
+        <script>
+        function openCircuit(evt, circuitName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(circuitName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+           
+        </body>
 
         <hr>
         
