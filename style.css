@@ -32,3 +32,16 @@ a:active {
   .dropdown-item{
     background-color: black;
   }
+  .headimg {
+    position: relative;
+    text-align: center;
+    font-size: x-large;
+    color: maroon;
+    -webkit-text-stroke: 2px whitesmoke;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
