@@ -5,7 +5,7 @@ var jumpButton;
 
 function setup() {
     createCanvas(400,300);
-    song = loadSound("twofeet.mp3");
+    song = loadSound("inossi-revive.mp3");
     buttonplay = createButton("play");
     buttonplay.mousePressed(togglePlaying);
     jumpButton = createButton("jump");
