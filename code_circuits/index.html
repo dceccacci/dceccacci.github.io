@@ -63,7 +63,7 @@
         .tab {
           float: left;
           border: 2px black;
-          background-color: #4b42cc;
+          background-color: #736af0;
           width: 20%;
           height: 300px;
         }
@@ -108,10 +108,35 @@
           <br>
         
         <div class="tab">
-          <button class="tablinks" onclick="openCircuit(event, '4bitadder')" id="defaultOpen">4-bit Adder</button>
-          <button class="tablinks" onclick="openCircuit(event, 'subtractor')">4-bit Subtractor</button>
-          <button class="tablinks" onclick="openCircuit(event, 'latchselect')">8-bit Adder with Latch/Select</button>
-          <button class="tablinks" onclick="openCircuit(event, 'counter')">8-bit Counter</button>
+          <div style="color:white;">Please select circuit to change view</div>
+          <button class="tablinks" onclick="openCircuit(event, 'halfadder')" id="defaultOpen">Half Adder</button>
+          <button class="tablinks" onclick="openCircuit(event, 'fulladder')">Full Adder</button>
+          <button class="tablinks" onclick="openCircuit(event, '4bitadder')">4-bit Adder</button>
+          <button class="tablinks" onclick="openCircuit(event, '8bitadder')">8-bit Adder</button>
+          <button class="tablinks" onclick="openCircuit(event, 'edgeflipflop')">Edge Triggered D-type Flipflop</button>
+          <button class="tablinks" onclick="openCircuit(event, 'subtractor')">4-bit Adder with Subtraction</button>
+          <button class="tablinks" onclick="openCircuit(event, 'latchselect')">8-bit Adder Machine</button>
+          <button class="tablinks" onclick="openCircuit(event, 'counter')">8-bit Ripple Counter</button>
+        </div>
+
+        <div id="halfadder" class="tabcontent">
+          <h3>Half Adder</h3>
+          <img width="90%" src="circuits/half-adder.jpg">
+        </div>
+
+        <div id="fulladder" class="tabcontent">
+          <h3>Full Adder</h3>
+          <img width="90%" src="circuits/full-adder.jpg">
+        </div>
+
+        <div id="8bitadder" class="tabcontent">
+          <h3>8-bit Adder</h3>
+          <img width="90%" src="circuits/8-bit-adder.jpg">
+        </div>
+
+        <div id="edgeflipflop" class="tabcontent">
+          <h3>Edge Triggered D-type Flipflop</h3>
+          <img width="90%" src="circuits/edge-triggered-dtype-flipflop.jpg">
         </div>
         
         <div id="4bitadder" class="tabcontent">
@@ -172,7 +197,8 @@
       
     </main>
 
-    <footer class="container">
+
+    <footer style="text-align: center;" class="container">
       <p>&copy; COCC 2019-2020</p>
     </footer>
 
